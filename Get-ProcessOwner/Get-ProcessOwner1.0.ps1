@@ -1,6 +1,6 @@
 ﻿#Cooper Redfern
 #09/11/2019
-#Return a list of win32_process objects where the process is Microsoft Project
+#Return a list of win32_process objects where the process is the given process
 $process = 'someProcess'
 $Users = (Get-WmiObject Win32_Process -ComputerName 'someDomain' | ?{ $_.ProcessName -match $process }).GetOwner() 
 #Print User attribute of each object returned
